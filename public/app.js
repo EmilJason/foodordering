@@ -266,7 +266,7 @@ async function redirectToCheckout() {
   } else {
     const response = await m.request({
       method: "POST",
-      url: "/create-checkout-session",
+      url: "/api/create-checkout-session",
       body: {
         items: state.cart,
         total: state.cart.reduce((total, food) => total + food.price, 0),
