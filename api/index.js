@@ -22,7 +22,7 @@ app.get('/foods', (req, res) => {
     }
 });
 
-app.post('https://foodordering-vert.vercel.app/create-checkout-session', async (req, res) => {
+app.post('https://foodordering-vert.vercel.app/api/create-checkout-session', async (req, res) => {
     console.log("checkout session", req.body)
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
