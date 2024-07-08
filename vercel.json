@@ -2,30 +2,30 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/**/*",
+      "src": "foodapi/public/**/*",
       "use": "@vercel/static"
     },
     {
-      "src": "public/app.js",
+      "src": "foodapi/public/app.js",
       "use": "@vercel/node"
     },
     {
-      "src": "public/index.html",
+      "src": "foodapi/public/index.html",
       "use": "@vercel/static"
     },
     {
-      "src": "public/styles.css",
+      "src": "foodapi/public/styles.css",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "api/index.js"
+      "dest": "foodapi/api/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "public/$1"
+      "dest": "foodapi/public/$1"
     }
   ]
 }
