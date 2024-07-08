@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path')
 const express = require('express');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const foods = require('../data.js')
